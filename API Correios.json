@@ -1,0 +1,1387 @@
+{
+	"info": {
+		"_postman_id": "04c22e85-49d7-2d99-15b8-f2d8731e8f2b",
+		"name": "Correios",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Sigep",
+			"item": [
+				{
+					"name": "Buscar Cliente",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n    \t<ns1:buscaCliente xmlns:ns1=\"http://cliente.bean.master.sigep.bsb.correios.com.br/\">\n    \t\t<idContrato>9992157880</idContrato>\n\t\t    <idCartaoPostagem>0067599079</idCartaoPostagem>\n\t\t    <usuario>sigep</usuario>\n\t\t    <senha>n5f9t8</senha>\n    \t</ns1:buscaCliente>\n\t</soap:Body>\n</soap:Envelope>"
+						},
+						"url": {
+							"raw": "https://apphom.correios.com.br/SigepMasterJPA/AtendeClienteService/AtendeCliente",
+							"protocol": "https",
+							"host": [
+								"apphom",
+								"correios",
+								"com",
+								"br"
+							],
+							"path": [
+								"SigepMasterJPA",
+								"AtendeClienteService",
+								"AtendeCliente"
+							]
+						},
+						"description": "Correios produção"
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Serviços Adicionais Ativos",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "text/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<ns1:buscaServicosAdicionaisAtivos xmlns:ns1=\"http://cliente.bean.master.sigep.bsb.correios.com.br/\"/>\n\t</soap:Body>\n</soap:Envelope>"
+						},
+						"url": {
+							"raw": "https://apphom.correios.com.br/SigepMasterJPA/AtendeClienteService/AtendeCliente",
+							"protocol": "https",
+							"host": [
+								"apphom",
+								"correios",
+								"com",
+								"br"
+							],
+							"path": [
+								"SigepMasterJPA",
+								"AtendeClienteService",
+								"AtendeCliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancelar Objeto",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "text/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<ns1:cancelarObjeto xmlns:ns1=\"http://cliente.bean.master.sigep.bsb.correios.com.br/\">\n\t\t\t<numeroEtiqueta>SG037892748BR</numeroEtiqueta>\n\t\t\t<idPlp>80790</idPlp>\n\t\t\t<usuario>sigep</usuario>\n\t\t\t<senha>n5f9t8</senha>\n\t\t</ns1:cancelarObjeto>\n\t</soap:Body>\n</soap:Envelope>"
+						},
+						"url": {
+							"raw": "https://apphom.correios.com.br/SigepMasterJPA/AtendeClienteService/AtendeCliente",
+							"protocol": "https",
+							"host": [
+								"apphom",
+								"correios",
+								"com",
+								"br"
+							],
+							"path": [
+								"SigepMasterJPA",
+								"AtendeClienteService",
+								"AtendeCliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar CEP",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "text/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<ns1:consultaCEP xmlns:ns1=\"http://cliente.bean.master.sigep.bsb.correios.com.br/\">\n\t\t\t<cep>40130200</cep>\n\t\t</ns1:consultaCEP>\n\t</soap:Body>\n</soap:Envelope>"
+						},
+						"url": {
+							"raw": "https://apphom.correios.com.br/SigepMasterJPA/AtendeClienteService/AtendeCliente",
+							"protocol": "https",
+							"host": [
+								"apphom",
+								"correios",
+								"com",
+								"br"
+							],
+							"path": [
+								"SigepMasterJPA",
+								"AtendeClienteService",
+								"AtendeCliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fechar PLP com Vários Serviços",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "text/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<ns1:fechaPlpVariosServicos xmlns:ns1=\"http://cliente.bean.master.sigep.bsb.correios.com.br/\">\n\t\t\t<xml>\n\t\t\t\t<!-- Enviar o conteúdo da tag <xml> como string -->\n\t\t\t\t<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?>\n\t\t\t\t<correioslog>\n\t\t\t\t\t<tipo_arquivo>Postagem</tipo_arquivo>\n\t\t\t\t\t<versao_arquivo>2.3</versao_arquivo>\n\t\t\t\t\t<plp>\n\t\t\t\t\t\t<id_plp/> <!-- Deixar em branco -->\n\t\t\t\t\t\t<valor_global/> <!-- Deixar em branco -->\n\t\t\t\t\t\t<mcu_unidade_postagem/> <!-- Deixar em branco -->\n\t\t\t\t\t\t<nome_unidade_postagem/> <!-- Deixar em branco -->\n\t\t\t\t\t\t<cartao_postagem>0067599079</cartao_postagem>\n\t\t\t\t\t</plp>\n\t\t\t\t\t<remetente>\n\t\t\t\t\t\t<numero_contrato>9992157880</numero_contrato>\n\t\t\t\t\t\t<numero_diretoria>10</numero_diretoria>\n\t\t\t\t\t\t<codigo_administrativo>17000190</codigo_administrativo>\n\t\t\t\t\t\t<nome_remetente>Empresa XPTO</nome_remetente>\n\t\t\t\t\t\t<logradouro_remetente>Avenida das Américas</logradouro_remetente>\n\t\t\t\t\t\t<numero_remetente>2370</numero_remetente>\n\t\t\t\t\t\t<complemento_remetente>12°andar</complemento_remetente>\n\t\t\t\t\t\t<bairro_remetente>Kennedy</bairro_remetente>\n\t\t\t\t\t\t<cep_remetente>32145000</cep_remetente>\n\t\t\t\t\t\t<cidade_remetente>Contagem</cidade_remetente>\n\t\t\t\t\t\t<uf_remetente>MG</uf_remetente>\n\t\t\t\t\t\t<telefone_remetente>4130795008</telefone_remetente>\n\t\t\t\t\t\t<fax_remetente>4191239321</fax_remetente>\n\t\t\t\t\t\t<email_remetente>contato@xpto.com.br</email_remetente>\n\t\t\t\t\t</remetente>\n\t\t\t\t\t<forma_pagamento/>\n\t\t\t\t\t<objeto_postal>\n\t\t\t\t\t\t<numero_etiqueta>SO000641962BR</numero_etiqueta> <!-- Apenas uma etiqueta com dígito verificador -->\n\t\t\t\t\t\t<codigo_objeto_cliente/> <!-- Deixar em branco -->\n\t\t\t\t\t\t<codigo_servico_postagem>41068</codigo_servico_postagem>\n\t\t\t\t\t\t<cubagem>0,00</cubagem> <!-- Sempre preencher com valor 0,00 -->\n\t\t\t\t\t\t<peso>2500</peso>\n\t\t\t\t\t\t<rt1/> <!-- Observação 1: Campo livre -->\n\t\t\t\t\t\t<rt2/> <!-- Observação 2: Campo livre -->\n\t\t\t\t\t\t<destinatario>\n\t\t\t\t\t\t\t<nome_destinatario>Pedro Vaz de Caminha</nome_destinatario>\n\t\t\t\t\t\t\t<telefone_destinatario>6232339644</telefone_destinatario>\n\t\t\t\t\t\t\t<celular_destinatario>62991239321</celular_destinatario>\n\t\t\t\t\t\t\t<email_destinatario>pedro.vaz@gmail.com</email_destinatario>\n\t\t\t\t\t\t\t<logradouro_destinatario >Rua das Jabuticabeiras</logradouro_destinatario>\n\t\t\t\t\t\t\t<complemento_destinatario/>\n\t\t\t\t\t\t\t<numero_end_destinatario>865</numero_end_destinatario>\n\t\t\t\t\t\t</destinatario>\n\t\t\t\t\t\t<nacional>\n\t\t\t\t\t\t\t<bairro_destinatario>Setor Industrial</bairro_destinatario>\n\t\t\t\t\t\t\t<cidade_destinatario>Alto Alegre</cidade_destinatario>\n\t\t\t\t\t\t\t<uf_destinatario>RR</uf_destinatario>\n\t\t\t\t\t\t\t<cep_destinatario>69350000</cep_destinatario>\n\t\t\t\t\t\t\t<codigo_usuario_postal/>\n\t\t\t\t\t\t\t<centro_custo_cliente/>\n\t\t\t\t\t\t\t<numero_nota_fiscal>112233</numero_nota_fiscal>\n\t\t\t\t\t\t\t<serie_nota_fiscal/><valor_nota_fiscal/>\n\t\t\t\t\t\t\t<natureza_nota_fiscal/>\n\t\t\t\t\t\t\t<descricao_objeto>Peças Automotivas</descricao_objeto>\n\t\t\t\t\t\t\t<valor_a_cobrar>0,0</valor_a_cobrar>\n\t\t\t\t\t\t</nacional>\n\t\t\t\t\t\t<servico_adicional>\n\t\t\t\t\t\t\t<codigo_servico_adicional>025</codigo_servico_adicional>\n\t\t\t\t\t\t\t<codigo_servico_adicional>001</codigo_servico_adicional>\n\t\t\t\t\t\t\t<codigo_servico_adicional >019</codigo_servico_adicional>\n\t\t\t\t\t\t\t<valor_declarado>3000,00</valor_declarado>\n\t\t\t\t\t\t</servico_adicional>\n\t\t\t\t\t\t<dimensao_objeto>\n\t\t\t\t\t\t\t<tipo_objeto>002</tipo_objeto>\n\t\t\t\t\t\t\t<dimensao_altura>50</dimensao_altura>\n\t\t\t\t\t\t\t<dimensao_largura>30</dimensao_largura>\n\t\t\t\t\t\t\t<dimensao_comprimento>60</dimensao_comprimento>\n\t\t\t\t\t\t\t<dimensao_diametro>0</dimensao_diametro>\n\t\t\t\t\t\t</dimensao_objeto>\n\t\t\t\t\t\t<data_postagem_sara/>\n\t\t\t\t\t\t<status_processamento>0</status_processamento> <!-- Sempre preencher com valor 0 -->\n\t\t\t\t\t\t<numero_comprovante_postagem/> <!-- Deixar em branco -->\n\t\t\t\t\t\t<valor_cobrado/> <!-- Deixar em branco -->\n\t\t\t\t\t</objeto_postal>\n\t\t\t\t\t<objeto_postal>\n\t\t\t\t\t\t<numero_etiqueta>SL999221795BR</numero_etiqueta> <!-- Apenas uma etiqueta com dígito verificador -->\n\t\t\t\t\t\t<codigo_objeto_cliente/> <!-- Deixar em branco -->\n\t\t\t\t\t\t<codigo_servico_postagem>40096</codigo_servico_postagem>\n\t\t\t\t\t\t<cubagem>0,00</cubagem> <!-- Sempre preencher com valor 0,00 -->\n\t\t\t\t\t\t<peso>1200</peso>\n\t\t\t\t\t\t<rt1/> <!-- Observação 1: Campo livre -->\n\t\t\t\t\t\t<rt2/> <!-- Observação 2: Campo livre -->\n\t\t\t\t\t\t<destinatario>\n\t\t\t\t\t\t\t<nome_destinatario>Fernando Henrique</nome_destinatario>\n\t\t\t\t\t\t\t<telefone_destinatario>6232339644</telefone_destinatario>\n\t\t\t\t\t\t\t<celular_destinatario>62991239333</celular_destinatario>\n\t\t\t\t\t\t\t<email_destinatario>fernando.henrique@hotmail.com.br</email_destinatario>\n\t\t\t\t\t\t\t<logradouro_destinatario>Rua Presidente Kennedy</logradouro_destinatario>\n\t\t\t\t\t\t\t<complemento_destinatario>Casa B</complemento_destinatario>\n\t\t\t\t\t\t\t<numero_end_destinatario>285</numero_end_destinatario>\n\t\t\t\t\t\t</destinatario>\n\t\t\t\t\t\t<nacional>\n\t\t\t\t\t\t\t<bairro_destinatario>Barra</bairro_destinatario>\n\t\t\t\t\t\t\t<cidade_destinatario>Salvador</cidade_destinatario>\n\t\t\t\t\t\t\t<uf_destinatario>BA</uf_destinatario>\n\t\t\t\t\t\t\t<cep_destinatario>40130200</cep_destinatario>\n\t\t\t\t\t\t\t<codigo_usuario_postal/>\n\t\t\t\t\t\t\t<centro_custo_cliente/>\n\t\t\t\t\t\t\t<numero_nota_fiscal>224455</numero_nota_fiscal>\n\t\t\t\t\t\t\t<serie_nota_fiscal/>\n\t\t\t\t\t\t\t<valor_nota_fiscal/>\n\t\t\t\t\t\t\t<natureza_nota_fiscal/>\n\t\t\t\t\t\t\t<descricao_objeto>Ventilador de Teto</descricao_objeto>\n\t\t\t\t\t\t\t<valor_a_cobrar>0,0</valor_a_cobrar>\n\t\t\t\t\t\t</nacional>\n\t\t\t\t\t\t<servico_adicional>\n\t\t\t\t\t\t\t<codigo_servico_adicional>025</codigo_servico_adicional>\n\t\t\t\t\t\t\t<codigo_servico_adicional>001</codigo_servico_adicional>\n\t\t\t\t\t\t\t<codigo_servico_adicional>019</codigo_servico_adicional>\n\t\t\t\t\t\t\t<valor_declarado>1000,00</valor_declarado>\n\t\t\t\t\t\t</servico_adicional>\n\t\t\t\t\t\t<dimensao_objeto>\n\t\t\t\t\t\t\t<tipo_objeto>002</tipo_objeto>\n\t\t\t\t\t\t\t<dimensao_altura>40</dimensao_altura>\n\t\t\t\t\t\t\t<dimensao_largura>50</dimensao_largura>\n\t\t\t\t\t\t\t<dimensao_comprimento>30</dimensao_comprimento>\n\t\t\t\t\t\t\t<dimensao_diametro>0</dimensao_diametro>\n\t\t\t\t\t\t</dimensao_objeto>\n\t\t\t\t\t\t<data_postagem_sara/>\n\t\t\t\t\t\t<status_processamento>0</status_processamento> <!-- Sempre preencher com valor 0 -->\n\t\t\t\t\t\t<numero_comprovante_postagem/> <!-- Deixar em branco -->\n\t\t\t\t\t\t<valor_cobrado/> <!-- Deixar em branco -->\n\t\t\t\t\t</objeto_postal>\n\t\t\t\t</correioslog>\n\t\t\t</xml>\n\t\t\t<idPlpCliente>102030</idPlpCliente>\n\t\t\t<cartaoPostagem>0067599079</cartaoPostagem>\n\t\t\t<listaEtiquetas>SO00064196BR</listaEtiquetas> <!-- Etiqueta sem dígito verificador -->\n\t\t\t<listaEtiquetas>SL99922179BR</listaEtiquetas> <!-- Etiqueta sem dígito verificador -->\n\t\t\t<usuario>sigep</usuario>\n\t\t\t<senha>n5f9t8</senha>\n\t\t</ns1:fechaPlpVariosServicos>\n\t</soap:Body>\n</soap:Envelope>"
+						},
+						"url": {
+							"raw": "https://apphom.correios.com.br/SigepMasterJPA/AtendeClienteService/AtendeCliente",
+							"protocol": "https",
+							"host": [
+								"apphom",
+								"correios",
+								"com",
+								"br"
+							],
+							"path": [
+								"SigepMasterJPA",
+								"AtendeClienteService",
+								"AtendeCliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Gerar Digito Verificador de Etiqueta",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "text/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<ns1:geraDigitoVerificadorEtiquetas xmlns:ns1=\"http://cliente.bean.master.sigep.bsb.correios.com.br/\">\n\t\t\t<etiquetas>DL74668653 BR</etiquetas>\n\t\t\t<etiquetas>DL76023727 BR</etiquetas>\n\t\t\t<usuario>sigep</usuario>\n\t\t\t<senha>n5f9t8</senha>\n\t\t</ns1:geraDigitoVerificadorEtiquetas>\n\t</soap:Body>\n</soap:Envelope>"
+						},
+						"url": {
+							"raw": "https://apphom.correios.com.br/SigepMasterJPA/AtendeClienteService/AtendeCliente",
+							"protocol": "https",
+							"host": [
+								"apphom",
+								"correios",
+								"com",
+								"br"
+							],
+							"path": [
+								"SigepMasterJPA",
+								"AtendeClienteService",
+								"AtendeCliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Solicitar Etiquetas",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "text/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<ns1:solicitaEtiquetas xmlns:ns1=\"http://cliente.bean.master.sigep.bsb.correios.com.br/\">\n\t\t\t<tipoDestinatario>C</tipoDestinatario>\n\t\t\t<identificador>34028316000103</identificador> <!-- CNPJ da Empresa -->\n\t\t\t<idServico>124849</idServico>\n\t\t\t<qtdEtiquetas>2</qtdEtiquetas>\n\t\t\t<usuario>sigep</usuario>\n\t\t\t<senha>n5f9t8</senha>\n\t\t</ns1:solicitaEtiquetas>\n\t</soap:Body>\n</soap:Envelope>"
+						},
+						"url": {
+							"raw": "https://apphom.correios.com.br/SigepMasterJPA/AtendeClienteService/AtendeCliente",
+							"protocol": "https",
+							"host": [
+								"apphom",
+								"correios",
+								"com",
+								"br"
+							],
+							"path": [
+								"SigepMasterJPA",
+								"AtendeClienteService",
+								"AtendeCliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Solicitar PLP",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "text/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<ns1:solicitaPLP xmlns:ns1=\"http://cliente.bean.master.sigep.bsb.correios.com.br/\">\n\t\t\t<numEtiqueta>SG037892748BR</numEtiqueta>\n\t\t\t<idPlpMaster>80790</idPlpMaster>\n\t\t\t<usuario>sigep</usuario>\n\t\t\t<senha>n5f9t8</senha>\n\t\t</ns1:solicitaPLP>\n\t</soap:Body>\n</soap:Envelope>"
+						},
+						"url": {
+							"raw": "https://apphom.correios.com.br/SigepMasterJPA/AtendeClienteService/AtendeCliente",
+							"protocol": "https",
+							"host": [
+								"apphom",
+								"correios",
+								"com",
+								"br"
+							],
+							"path": [
+								"SigepMasterJPA",
+								"AtendeClienteService",
+								"AtendeCliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Solicitar XML da PLP",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "text/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<ns1:solicitaXmlPlp xmlns:ns1=\"http://cliente.bean.master.sigep.bsb.correios.com.br/\">\n\t\t\t<idPlpMaster>80790</idPlpMaster>\n\t\t\t<usuario>sigep</usuario>\n\t\t\t<senha>n5f9t8</senha>\n\t\t</ns1:solicitaXmlPlp>\n\t</soap:Body>\n</soap:Envelope>"
+						},
+						"url": {
+							"raw": "https://apphom.correios.com.br/SigepMasterJPA/AtendeClienteService/AtendeCliente",
+							"protocol": "https",
+							"host": [
+								"apphom",
+								"correios",
+								"com",
+								"br"
+							],
+							"path": [
+								"SigepMasterJPA",
+								"AtendeClienteService",
+								"AtendeCliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verificar Disponibilidade de Serviço",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "text/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<ns1:verificaDisponibilidadeServico xmlns:ns1=\"http://cliente.bean.master.sigep.bsb.correios.com.br/\">\n\t\t\t<codAdministrativo>17000190</codAdministrativo>\n\t\t\t<usuario>sigep</usuario>\n\t\t\t<senha>n5f9t8</senha>\n\t\t\t<numeroServico>04162</numeroServico>\n\t\t\t<cepOrigem>05311900</cepOrigem>\n\t\t\t<cepDestino>05311900</cepDestino>\n\t\t</ns1:verificaDisponibilidadeServico>\n\t</soap:Body>\n</soap:Envelope>"
+						},
+						"url": {
+							"raw": "https://apphom.correios.com.br/SigepMasterJPA/AtendeClienteService/AtendeCliente",
+							"protocol": "https",
+							"host": [
+								"apphom",
+								"correios",
+								"com",
+								"br"
+							],
+							"path": [
+								"SigepMasterJPA",
+								"AtendeClienteService",
+								"AtendeCliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verificar Status do Cartão de Postagem",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "text/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<ns1:getStatusCartaoPostagem xmlns:ns1=\"http://cliente.bean.master.sigep.bsb.correios.com.br/\">\n\t\t\t<numeroCartaoPostagem>0067599079</numeroCartaoPostagem>\n\t\t\t<usuario>sigep</usuario>\n\t\t\t<senha>n5f9t8</senha>\n\t\t</ns1:getStatusCartaoPostagem>\n\t</soap:Body>\n</soap:Envelope>"
+						},
+						"url": {
+							"raw": "https://apphom.correios.com.br/SigepMasterJPA/AtendeClienteService/AtendeCliente",
+							"protocol": "https",
+							"host": [
+								"apphom",
+								"correios",
+								"com",
+								"br"
+							],
+							"path": [
+								"SigepMasterJPA",
+								"AtendeClienteService",
+								"AtendeCliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bloquear Objeto",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "text/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<ns1:bloquearObjeto xmlns:ns1=\"http://cliente.bean.master.sigep.bsb.correios.com.br/\">\n\t\t\t<numeroEtiqueta>SG037892748BR</numeroEtiqueta>\n\t\t\t<idPlp>80790</idPlp>\n\t\t\t<tipoBloqueio>FRAUDE_BLOQUEIO</tipoBloqueio> <!-- Sempre preencher com valor FRAUDE_BLOQUEIO -->\n\t\t\t<acao>DEVOLVIDO_AO_REMETENTE</acao> <!-- Sempre preencher com valor DEVOLVIDO_AO_REMETENTE -->\n\t\t\t<usuario>sigep</usuario>\n\t\t\t<senha>n5f9t8</senha>\n\t\t</ns1:bloquearObjeto>\n\t</soap:Body>\n</soap:Envelope>"
+						},
+						"url": {
+							"raw": "https://apphom.correios.com.br/SigepMasterJPA/AtendeClienteService/AtendeCliente",
+							"protocol": "https",
+							"host": [
+								"apphom",
+								"correios",
+								"com",
+								"br"
+							],
+							"path": [
+								"SigepMasterJPA",
+								"AtendeClienteService",
+								"AtendeCliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar SRO",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "text/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<ns1:consultaSRO xmlns:ns1=\"http://cliente.bean.master.sigep.bsb.correios.com.br/\">\n\t\t\t<listaObjetos>PS591936835BR</listaObjetos>\n\t\t\t<tipoConsulta>L</tipoConsulta>\n\t\t\t<tipoResultado>T</tipoResultado>\n\t\t\t<usuarioSro>ECT</usuarioSro>\n\t\t\t<senhaSro>SRO</senhaSro>\n\t\t</ns1:consultaSRO>\n\t</soap:Body>\n</soap:Envelope>"
+						},
+						"url": {
+							"raw": "https://apphom.correios.com.br/SigepMasterJPA/AtendeClienteService/AtendeCliente",
+							"protocol": "https",
+							"host": [
+								"apphom",
+								"correios",
+								"com",
+								"br"
+							],
+							"path": [
+								"SigepMasterJPA",
+								"AtendeClienteService",
+								"AtendeCliente"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Precificador",
+			"item": [
+				{
+					"name": "Calcular Data máxima de Entrega [Indisponível]",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "text/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<soap:Envelope xmlns:soap='http://www.w3.org/2003/05/soap-envelope'>\n\t<soap:Body>\n    \t<CalcDataMaxima xmlns='http://tempuri.org/'>\n\t\t\t<codigoObjeto>PS591936835BR</codigoObjeto>\n    \t</CalcDataMaxima>\n\t</soap:Body>\n</soap:Envelope>"
+						},
+						"url": {
+							"raw": "http://ws.correios.com.br/calculador/CalcPrecoPrazo.asmx?wsdl",
+							"protocol": "http",
+							"host": [
+								"ws",
+								"correios",
+								"com",
+								"br"
+							],
+							"path": [
+								"calculador",
+								"CalcPrecoPrazo.asmx"
+							],
+							"query": [
+								{
+									"key": "wsdl",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Calcular Prazo de Entrega",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "text/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<soap:Envelope xmlns:soap='http://www.w3.org/2003/05/soap-envelope'>\n\t<soap:Body>\n    \t<CalcPrazo xmlns='http://tempuri.org/'>\n\t\t\t<nCdServico>04162,04669</nCdServico>\n\t\t\t<sCepOrigem>31920011</sCepOrigem>\n\t\t\t<sCepDestino>32140530</sCepDestino>\n    \t</CalcPrazo>\n\t</soap:Body>\n</soap:Envelope>"
+						},
+						"url": {
+							"raw": "http://ws.correios.com.br/calculador/CalcPrecoPrazo.asmx?wsdl",
+							"protocol": "http",
+							"host": [
+								"ws",
+								"correios",
+								"com",
+								"br"
+							],
+							"path": [
+								"calculador",
+								"CalcPrecoPrazo.asmx"
+							],
+							"query": [
+								{
+									"key": "wsdl",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Calcular Prazo de Entrega com Data",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "text/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<soap:Envelope xmlns:soap='http://www.w3.org/2003/05/soap-envelope'>\n\t<soap:Body>\n    \t<CalcPrazoData xmlns='http://tempuri.org/'>\n\t\t\t<nCdServico>04162,04669</nCdServico>\n\t\t\t<sCepOrigem>31920011</sCepOrigem>\n\t\t\t<sCepDestino>32140530</sCepDestino>\n\t\t\t<sDtCalculo>10/10/2018</sDtCalculo>\n    \t</CalcPrazoData>\n\t</soap:Body>\n</soap:Envelope>"
+						},
+						"url": {
+							"raw": "http://ws.correios.com.br/calculador/CalcPrecoPrazo.asmx?wsdl",
+							"protocol": "http",
+							"host": [
+								"ws",
+								"correios",
+								"com",
+								"br"
+							],
+							"path": [
+								"calculador",
+								"CalcPrecoPrazo.asmx"
+							],
+							"query": [
+								{
+									"key": "wsdl",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Calcular Prazo de Entrega com Restrição",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "text/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<CalcPrazoRestricao xmlns='http://tempuri.org/'>\n\t\t\t<nCdServico>04162,04669</nCdServico>\n\t\t\t<sCepOrigem>31920011</sCepOrigem>\n\t\t\t<sCepDestino>32140530</sCepDestino>\n\t\t\t<sDtCalculo>10/10/2018</sDtCalculo>\n\t\t</CalcPrazoRestricao>\n\t</soap:Body>\n</soap:Envelope>"
+						},
+						"url": {
+							"raw": "http://ws.correios.com.br/calculador/CalcPrecoPrazo.asmx?wsdl",
+							"protocol": "http",
+							"host": [
+								"ws",
+								"correios",
+								"com",
+								"br"
+							],
+							"path": [
+								"calculador",
+								"CalcPrecoPrazo.asmx"
+							],
+							"query": [
+								{
+									"key": "wsdl",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Calcular Preço de Entrega",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "text/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<CalcPreco xmlns='http://tempuri.org/'>\n\t\t\t<nCdEmpresa>17000190</nCdEmpresa>\n\t\t\t<sDsSenha>n5f9t8</sDsSenha>\n\t\t\t<nCdServico>04162,04669</nCdServico>\n\t\t\t<sCepOrigem>31920011</sCepOrigem>\n\t\t\t<sCepDestino>32140530</sCepDestino>\n\t\t\t<nVlPeso>1</nVlPeso>\n\t\t\t<nCdFormato>1</nCdFormato>\n\t\t\t<nVlComprimento>16</nVlComprimento>\n\t\t\t<nVlAltura>10</nVlAltura>\n\t\t\t<nVlLargura>12</nVlLargura>\n\t\t\t<nVlDiametro>0</nVlDiametro>\n\t\t\t<sCdMaoPropria>N</sCdMaoPropria>\n\t\t\t<nVlValorDeclarado>900.00</nVlValorDeclarado>\n\t\t\t<sCdAvisoRecebimento>N</sCdAvisoRecebimento>\n\t\t</CalcPreco>\n\t</soap:Body>\n</soap:Envelope>"
+						},
+						"url": {
+							"raw": "http://ws.correios.com.br/calculador/CalcPrecoPrazo.asmx?wsdl",
+							"protocol": "http",
+							"host": [
+								"ws",
+								"correios",
+								"com",
+								"br"
+							],
+							"path": [
+								"calculador",
+								"CalcPrecoPrazo.asmx"
+							],
+							"query": [
+								{
+									"key": "wsdl",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Calcular Preço de Entrega com Data",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "text/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<CalcPrecoData xmlns='http://tempuri.org/'>\n\t\t\t<nCdEmpresa>17000190</nCdEmpresa>\n\t\t\t<sDsSenha>n5f9t8</sDsSenha>\n\t\t\t<nCdServico>04162,04669</nCdServico>\n\t\t\t<sCepOrigem>31920011</sCepOrigem>\n\t\t\t<sCepDestino>32140530</sCepDestino>\n\t\t\t<nVlPeso>1</nVlPeso>\n\t\t\t<nCdFormato>1</nCdFormato>\n\t\t\t<nVlComprimento>16</nVlComprimento>\n\t\t\t<nVlAltura>10</nVlAltura>\n\t\t\t<nVlLargura>12</nVlLargura>\n\t\t\t<nVlDiametro>0</nVlDiametro>\n\t\t\t<sCdMaoPropria>N</sCdMaoPropria>\n\t\t\t<nVlValorDeclarado>900.00</nVlValorDeclarado>\n\t\t\t<sCdAvisoRecebimento>N</sCdAvisoRecebimento>\n\t\t\t<sDtCalculo>10/10/2018</sDtCalculo>\n\t\t</CalcPrecoData>\n\t</soap:Body>\n</soap:Envelope>"
+						},
+						"url": {
+							"raw": "http://ws.correios.com.br/calculador/CalcPrecoPrazo.asmx?wsdl",
+							"protocol": "http",
+							"host": [
+								"ws",
+								"correios",
+								"com",
+								"br"
+							],
+							"path": [
+								"calculador",
+								"CalcPrecoPrazo.asmx"
+							],
+							"query": [
+								{
+									"key": "wsdl",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Calcular Preço de Entrega FAC",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "text/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<CalcPrecoFAC xmlns='http://tempuri.org/'>\n\t\t\t<nCdServico>82422</nCdServico>\n\t\t\t<nVlPeso>1</nVlPeso>\n\t\t\t<strDataCalculo>10/10/2018</strDataCalculo>\n\t\t</CalcPrecoFAC>\n\t</soap:Body>\n</soap:Envelope>"
+						},
+						"url": {
+							"raw": "http://ws.correios.com.br/calculador/CalcPrecoPrazo.asmx?wsdl",
+							"protocol": "http",
+							"host": [
+								"ws",
+								"correios",
+								"com",
+								"br"
+							],
+							"path": [
+								"calculador",
+								"CalcPrecoPrazo.asmx"
+							],
+							"query": [
+								{
+									"key": "wsdl",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Calcular Preço e Prazo de Entrega",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "text/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<soap:Envelope xmlns:soap='http://schemas.xmlsoap.org/soap/envelope/'>\n\t<soap:Body>\n    \t<CalcPrecoPrazo xmlns='http://tempuri.org/'>\n\t\t\t<nCdEmpresa>17000190</nCdEmpresa>\n\t\t\t<sDsSenha>n5f9t8</sDsSenha>\n\t\t\t<nCdServico>04162,04669</nCdServico>\n\t\t\t<sCepOrigem>31920011</sCepOrigem>\n\t\t\t<sCepDestino>32140530</sCepDestino>\n\t\t\t<nVlPeso>1</nVlPeso>\n\t\t\t<nCdFormato>1</nCdFormato>\n\t\t\t<nVlComprimento>16</nVlComprimento>\n\t\t\t<nVlAltura>10</nVlAltura>\n\t\t\t<nVlLargura>12</nVlLargura>\n\t\t\t<nVlDiametro>0</nVlDiametro>\n\t\t\t<sCdMaoPropria>N</sCdMaoPropria>\n\t\t\t<nVlValorDeclarado>900.00</nVlValorDeclarado>\n\t\t\t<sCdAvisoRecebimento>N</sCdAvisoRecebimento>\n    \t</CalcPrecoPrazo>\n\t</soap:Body>\n</soap:Envelope>"
+						},
+						"url": {
+							"raw": "http://ws.correios.com.br/calculador/CalcPrecoPrazo.asmx?wsdl",
+							"protocol": "http",
+							"host": [
+								"ws",
+								"correios",
+								"com",
+								"br"
+							],
+							"path": [
+								"calculador",
+								"CalcPrecoPrazo.asmx"
+							],
+							"query": [
+								{
+									"key": "wsdl",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Calcular Preço e Prazo de Entrega com Data",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "text/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<soap:Envelope xmlns:soap='http://schemas.xmlsoap.org/soap/envelope/'>\n\t<soap:Body>\n    \t<CalcPrecoPrazoData xmlns='http://tempuri.org/'>\n\t\t\t<nCdEmpresa>17000190</nCdEmpresa>\n\t\t\t<sDsSenha>n5f9t8</sDsSenha>\n\t\t\t<nCdServico>04162,04669</nCdServico>\n\t\t\t<sCepOrigem>31920011</sCepOrigem>\n\t\t\t<sCepDestino>32140530</sCepDestino>\n\t\t\t<nVlPeso>1</nVlPeso>\n\t\t\t<nCdFormato>1</nCdFormato>\n\t\t\t<nVlComprimento>16</nVlComprimento>\n\t\t\t<nVlAltura>10</nVlAltura>\n\t\t\t<nVlLargura>12</nVlLargura>\n\t\t\t<nVlDiametro>0</nVlDiametro>\n\t\t\t<sCdMaoPropria>N</sCdMaoPropria>\n\t\t\t<nVlValorDeclarado>900.00</nVlValorDeclarado>\n\t\t\t<sCdAvisoRecebimento>N</sCdAvisoRecebimento>\n\t\t\t<sDtCalculo>30/08/2018</sDtCalculo>\n    \t</CalcPrecoPrazoData>\n\t</soap:Body>\n</soap:Envelope>"
+						},
+						"url": {
+							"raw": "http://ws.correios.com.br/calculador/CalcPrecoPrazo.asmx?wsdl",
+							"protocol": "http",
+							"host": [
+								"ws",
+								"correios",
+								"com",
+								"br"
+							],
+							"path": [
+								"calculador",
+								"CalcPrecoPrazo.asmx"
+							],
+							"query": [
+								{
+									"key": "wsdl",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Calcular Preço e Prazo de Entrega com Restrição",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "text/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<soap:Envelope xmlns:soap='http://schemas.xmlsoap.org/soap/envelope/'>\n\t<soap:Body>\n    \t<CalcPrecoPrazoRestricao xmlns='http://tempuri.org/'>\n\t\t\t<nCdEmpresa>17000190</nCdEmpresa>\n\t\t\t<sDsSenha>n5f9t8</sDsSenha>\n\t\t\t<nCdServico>04162,04669</nCdServico>\n\t\t\t<sCepOrigem>31920011</sCepOrigem>\n\t\t\t<sCepDestino>32140530</sCepDestino>\n\t\t\t<nVlPeso>1</nVlPeso>\n\t\t\t<nCdFormato>1</nCdFormato>\n\t\t\t<nVlComprimento>16</nVlComprimento>\n\t\t\t<nVlAltura>10</nVlAltura>\n\t\t\t<nVlLargura>12</nVlLargura>\n\t\t\t<nVlDiametro>0</nVlDiametro>\n\t\t\t<sCdMaoPropria>N</sCdMaoPropria>\n\t\t\t<nVlValorDeclarado>900.00</nVlValorDeclarado>\n\t\t\t<sCdAvisoRecebimento>N</sCdAvisoRecebimento>\n\t\t\t<sDtCalculo>30/08/2018</sDtCalculo>\n    \t</CalcPrecoPrazoRestricao>\n\t</soap:Body>\n</soap:Envelope>"
+						},
+						"url": {
+							"raw": "http://ws.correios.com.br/calculador/CalcPrecoPrazo.asmx?wsdl",
+							"protocol": "http",
+							"host": [
+								"ws",
+								"correios",
+								"com",
+								"br"
+							],
+							"path": [
+								"calculador",
+								"CalcPrecoPrazo.asmx"
+							],
+							"query": [
+								{
+									"key": "wsdl",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Serviços",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "text/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<soap:Envelope xmlns:soap='http://schemas.xmlsoap.org/soap/envelope/'>\n\t<soap:Body>\n    \t<ListaServicos xmlns='http://tempuri.org/'/>\n\t</soap:Body>\n</soap:Envelope>"
+						},
+						"url": {
+							"raw": "http://ws.correios.com.br/calculador/CalcPrecoPrazo.asmx?wsdl",
+							"protocol": "http",
+							"host": [
+								"ws",
+								"correios",
+								"com",
+								"br"
+							],
+							"path": [
+								"calculador",
+								"CalcPrecoPrazo.asmx"
+							],
+							"query": [
+								{
+									"key": "wsdl",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Serviços STAR",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "text/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<soap:Envelope xmlns:soap='http://schemas.xmlsoap.org/soap/envelope/'>\n\t<soap:Body>\n    \t<ListaServicosSTAR xmlns='http://tempuri.org/'/>\n\t</soap:Body>\n</soap:Envelope>"
+						},
+						"url": {
+							"raw": "http://ws.correios.com.br/calculador/CalcPrecoPrazo.asmx?wsdl",
+							"protocol": "http",
+							"host": [
+								"ws",
+								"correios",
+								"com",
+								"br"
+							],
+							"path": [
+								"calculador",
+								"CalcPrecoPrazo.asmx"
+							],
+							"query": [
+								{
+									"key": "wsdl",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Logística Reversa",
+			"item": [
+				{
+					"name": "Acompanhar Pedido",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "empresacws",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "text/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<ns1:acompanharPedido xmlns:ns1=\"http://service.logisticareversa.correios.com.br/\">\n\t\t\t<codAdministrativo>17000190</codAdministrativo>\n\t\t\t<tipoBusca>H</tipoBusca> <!-- Preencher com H (Todos) ou U (Último) -->\n\t\t\t<tipoSolicitacao>A</tipoSolicitacao> <numeroPedido>1040893603</numeroPedido>\n\t\t</ns1:acompanharPedido>\n\t</soap:Body>\n</soap:Envelope>"
+						},
+						"url": {
+							"raw": "https://apphom.correios.com.br/logisticaReversaWS/logisticaReversaService/logisticaReversaWS?wsdl",
+							"protocol": "https",
+							"host": [
+								"apphom",
+								"correios",
+								"com",
+								"br"
+							],
+							"path": [
+								"logisticaReversaWS",
+								"logisticaReversaService",
+								"logisticaReversaWS"
+							],
+							"query": [
+								{
+									"key": "wsdl",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Acompanhar Pedido por Data",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "empresacws",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "text/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<ns1:acompanharPedidoPorData xmlns:ns1=\"http://service.logisticareversa.correios.com.br/\">\n\t\t\t<codAdministrativo>17000190</codAdministrativo>\n\t\t\t<tipoSolicitacao>A</tipoSolicitacao>\n\t\t\t<data>14/12/2018</data>\n\t\t</ns1:acompanharPedidoPorData>\n\t</soap:Body>\n</soap:Envelope>"
+						},
+						"url": {
+							"raw": "https://apphom.correios.com.br/logisticaReversaWS/logisticaReversaService/logisticaReversaWS?wsdl",
+							"protocol": "https",
+							"host": [
+								"apphom",
+								"correios",
+								"com",
+								"br"
+							],
+							"path": [
+								"logisticaReversaWS",
+								"logisticaReversaService",
+								"logisticaReversaWS"
+							],
+							"query": [
+								{
+									"key": "wsdl",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancelar Pedido",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "empresacws",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "text/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<ns1:cancelarPedido xmlns:ns1=\"http://service.logisticareversa.correios.com.br/\">\n\t\t\t<codAdministrativo>17000190</codAdministrativo>\n\t\t\t<numeroPedido>1040893603</numeroPedido>\n\t\t\t<tipo>A</tipo>\n\t\t</ns1:cancelarPedido>\n\t</soap:Body>\n</soap:Envelope>"
+						},
+						"url": {
+							"raw": "https://apphom.correios.com.br/logisticaReversaWS/logisticaReversaService/logisticaReversaWS?wsdl",
+							"protocol": "https",
+							"host": [
+								"apphom",
+								"correios",
+								"com",
+								"br"
+							],
+							"path": [
+								"logisticaReversaWS",
+								"logisticaReversaService",
+								"logisticaReversaWS"
+							],
+							"query": [
+								{
+									"key": "wsdl",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Gerar Dígito Verigficador de Número de Postagem",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "empresacws",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "text/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<ns1:calcularDigitoVerificador xmlns:ns1=\"http://service.logisticareversa.correios.com.br/\">\n\t\t\t<numero>19484775</numero>\n\t\t</ns1:calcularDigitoVerificador>\n\t</soap:Body>\n</soap:Envelope>"
+						},
+						"url": {
+							"raw": "https://apphom.correios.com.br/logisticaReversaWS/logisticaReversaService/logisticaReversaWS?wsdl",
+							"protocol": "https",
+							"host": [
+								"apphom",
+								"correios",
+								"com",
+								"br"
+							],
+							"path": [
+								"logisticaReversaWS",
+								"logisticaReversaService",
+								"logisticaReversaWS"
+							],
+							"query": [
+								{
+									"key": "wsdl",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Solicitar Intervalo de Números de Postagem",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "empresacws",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "text/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<ns1:solicitarRange xmlns:ns1=\"http://service.logisticareversa.correios.com.br/\">\n\t\t\t<codAdministrativo>17000190</codAdministrativo>\n\t\t\t<tipo>AP</tipo>\n\t\t\t<servico></servico>\n\t\t\t<quantidade>80</quantidade>\n\t\t</ns1:solicitarRange>\n\t</soap:Body>\n</soap:Envelope>"
+						},
+						"url": {
+							"raw": "https://apphom.correios.com.br/logisticaReversaWS/logisticaReversaService/logisticaReversaWS?wsdl",
+							"protocol": "https",
+							"host": [
+								"apphom",
+								"correios",
+								"com",
+								"br"
+							],
+							"path": [
+								"logisticaReversaWS",
+								"logisticaReversaService",
+								"logisticaReversaWS"
+							],
+							"query": [
+								{
+									"key": "wsdl",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Solicitar Postagem Reversa",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "empresacws",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "text/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<ns1:solicitarPostagemReversa xmlns:ns1=\"http://service.logisticareversa.correios.com.br/\">\n\t\t\t<codAdministrativo>17000190</codAdministrativo>\n\t\t\t<codigo_servico>41076</codigo_servico>\n\t\t\t<cartao>0067599079</cartao>\n\t\t\t<destinatario>\n\t\t\t\t<nome>Empresa XPTO</nome>\n\t\t\t\t<logradouro>Avenida das Américas</logradouro>\n\t\t\t\t<numero>2370</numero>\n\t\t\t\t<complemento>12° andar</complemento>\n\t\t\t\t<bairro>Kennedy</bairro>\n\t\t\t\t<referencia/>\n\t\t\t\t<cidade>Contagem</cidade>\n\t\t\t\t<uf>MG</uf>\n\t\t\t\t<cep>32145000</cep>\n\t\t\t\t<ddd>31</ddd>\n\t\t\t\t<telefone>33334444</telefone>\n\t\t\t\t<email>contato@xpto.com.br</email>\n        \t</destinatario>\n        \t<coletas_solicitadas>\n\t\t\t\t<tipo>A</tipo> <!-- Preencher com C (Coleta) ou A (Autorização de Postagem) -->\n\t\t\t\t<id_cliente>1</id_cliente>\n\t\t\t\t<valor_declarado>1000.00</valor_declarado>\n\t\t\t\t<descricao>Não aceitar se não estiver embalado em isopor</descricao>\n\t\t\t\t<cklist/>\n\t\t\t\t<documento/>\n\t\t\t\t<remetente>\n\t\t\t\t\t<nome>Pedro Vaz de Caminha</nome>\n\t\t\t\t\t<logradouro>Rua das Jabuticabeiras</logradouro>\n\t\t\t\t\t<numero>865</numero>\n\t\t\t\t\t<complemento/>\n\t\t\t\t\t<bairro>Setor Industrial</bairro>\n\t\t\t\t\t<referencia/>\n\t\t\t\t\t<cidade>Alto Alegre</cidade>\n\t\t\t\t\t<uf>RR</uf>\n\t\t\t\t\t<cep>69350000</cep>\n\t\t\t\t\t<ddd>61</ddd>\n\t\t\t\t\t<telefone>988887777</telefone>\n\t\t\t\t\t<email>pedro.vaz@gmail.com</email>\n\t\t\t\t\t<identificacao></identificacao>\n\t\t\t\t\t<ddd_celular>61</ddd_celular>\n\t\t\t\t\t<celular>92236666</celular>\n\t\t\t\t\t<sms>N</sms> <!-- Preencher com S (Sim) ou N (Não) -->\n\t\t\t\t\t<identificacao>85786665003</identificacao>\n\t\t\t\t</remetente>\n\t\t\t\t<produto>\n\t\t\t\t\t<codigo>116600063</codigo>\n\t\t\t\t\t<tipo>0</tipo>\n\t\t\t\t\t<qtd>1</qtd>\n\t\t\t\t</produto>\n\t\t\t\t<numero/>\n\t\t\t\t<ag>2</ag>\n\t\t\t\t<cartao>0067599079</cartao>\n\t\t\t\t<servico_adicional/>\n\t\t\t\t<ar>1</ar> <!-- Preencher com 1 (Sim) ou 0 (Não) -->\n\t\t\t\t<obj_col>\n\t\t\t\t\t<item>1</item> <!-- Sempre preencher com valor 1 -->\n\t\t\t\t\t<desc>Peças Automotivas</desc>\n\t\t\t\t\t<entrega/>\n\t\t\t\t\t<num></num> <!-- Deixar em branco -->\n\t\t\t\t\t<id>000120</id>\n\t\t        </obj_col>\n\t\t    </coletas_solicitadas>\n\t\t    <coletas_solicitadas>\n\t\t\t\t<tipo>A</tipo> <!-- Preencher com C (Coleta) ou A (Autorização de Postagem) -->\n\t\t\t\t<id_cliente>2</id_cliente>\n\t\t\t\t<valor_declarado>1000.00</valor_declarado>\n\t\t\t\t<descricao/>\n\t\t\t\t<cklist/>\n\t\t\t\t<documento/>\n\t\t\t\t<remetente>\n\t\t\t\t\t<nome>Fernando Henrique</nome>\n\t\t\t\t\t<logradouro>Rua Presidente Kennedy</logradouro>\n\t\t\t\t\t<numero>285</numero>\n\t\t\t\t\t<complemento>Casa B</complemento>\n\t\t\t\t\t<bairro>Barra</bairro>\n\t\t\t\t\t<referencia/>\n\t\t\t\t\t<cidade>Salvador</cidade>\n\t\t\t\t\t<uf>BA</uf>\n\t\t\t\t\t<cep>40130200</cep>\n\t\t\t\t\t<ddd>62</ddd>\n\t\t\t\t\t<telefone>32339644</telefone>\n\t\t\t\t\t<email>fernando.henrique@hotmail.com.br</email>\n\t\t\t\t\t<identificacao></identificacao>\n\t\t\t\t\t<ddd_celular>62</ddd_celular>\n\t\t\t\t\t<celular>991239333</celular>\n\t\t\t\t\t<sms>N</sms> <!-- Preencher com S (Sim) ou N (Não) -->\n\t\t\t\t\t<identificacao>38142582074</identificacao>\n\t\t\t\t</remetente>\n\t\t\t\t<produto>\n\t\t\t\t\t<codigo>116600063</codigo>\n\t\t\t\t\t<tipo>0</tipo>\n\t\t\t\t\t<qtd>1</qtd>\n\t\t\t\t</produto>\n\t\t\t\t<numero/>\n\t\t\t\t<ag>2</ag>\n\t\t\t\t<cartao>0067599079</cartao>\n\t\t\t\t<servico_adicional/>\n\t\t\t\t<ar>1</ar> <!-- Preencher com 1 (Sim) ou 0 (Não) -->\n\t\t\t\t<obj_col>\n\t\t\t\t\t<item>1</item> <!-- Sempre preencher com valor 1 -->\n\t\t\t\t\t<desc>Ventilador de Teto</desc>\n\t\t\t\t\t<entrega/>\n\t\t\t\t\t<num></num> <!-- Deixar em branco -->\n\t\t\t\t\t<id>000121</id>\n\t\t        </obj_col>\n\t\t    </coletas_solicitadas>\n\t\t</ns1:solicitarPostagemReversa>\n\t</soap:Body>\n</soap:Envelope>"
+						},
+						"url": {
+							"raw": "https://apphom.correios.com.br/logisticaReversaWS/logisticaReversaService/logisticaReversaWS?wsdl",
+							"protocol": "https",
+							"host": [
+								"apphom",
+								"correios",
+								"com",
+								"br"
+							],
+							"path": [
+								"logisticaReversaWS",
+								"logisticaReversaService",
+								"logisticaReversaWS"
+							],
+							"query": [
+								{
+									"key": "wsdl",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Solicitar Postagem Reversa com Coleta",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "empresacws",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "text/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<ns1:solicitarPostagemSimultanea xmlns:ns1=\"http://service.logisticareversa.correios.com.br/\">\n\t\t\t<codAdministrativo>17000190</codAdministrativo>\n\t\t\t<codigo_servico>41076</codigo_servico>\n\t\t\t<cartao>0067599079</cartao>\n\t\t\t<destinatario>\n\t\t\t\t<nome>Empresa XPTO</nome>\n\t\t\t\t<logradouro>Avenida das Américas</logradouro>\n\t\t\t\t<numero>2370</numero>\n\t\t\t\t<complemento>12° andar</complemento>\n\t\t\t\t<bairro>Kennedy</bairro>\n\t\t\t\t<referencia/>\n\t\t\t\t<cidade>Contagem</cidade>\n\t\t\t\t<uf>MG</uf>\n\t\t\t\t<cep>32145000</cep>\n\t\t\t\t<ddd>31</ddd>\n\t\t\t\t<telefone>33334444</telefone>\n\t\t\t\t<email>contato@xpto.com.br</email>\n        \t</destinatario>\n\t\t\t<coletas_solicitadas>\n\t\t\t\t<tipo>C</tipo> <!-- Preencher com C (Coleta) ou A (Autorização de Postagem) -->\n\t\t\t\t<id_cliente>2</id_cliente>\n\t\t\t\t<valor_declarado>1000.00</valor_declarado>\n\t\t\t\t<descricao/>\n\t\t\t\t<cklist/>\n\t\t\t\t<documento/>\n\t\t\t\t<remetente>\n\t\t\t\t\t<nome>Fernando Henrique</nome>\n\t\t\t\t\t<logradouro>Rua Presidente Kennedy</logradouro>\n\t\t\t\t\t<numero>285</numero>\n\t\t\t\t\t<complemento>Casa B</complemento>\n\t\t\t\t\t<bairro>Barra</bairro>\n\t\t\t\t\t<referencia/>\n\t\t\t\t\t<cidade>Salvador</cidade>\n\t\t\t\t\t<uf>BA</uf>\n\t\t\t\t\t<cep>40130200</cep>\n\t\t\t\t\t<ddd>62</ddd>\n\t\t\t\t\t<telefone>32339644</telefone>\n\t\t\t\t\t<email>fernando.henrique@hotmail.com.br</email>\n\t\t\t\t\t<identificacao></identificacao>\n\t\t\t\t\t<ddd_celular>62</ddd_celular>\n\t\t\t\t\t<celular>991239333</celular>\n\t\t\t\t\t<sms>N</sms> <!-- Preencher com S (Sim) ou N (Não) -->\n\t\t\t\t\t<identificacao>38142582074</identificacao>\n\t\t\t\t</remetente>\n\t\t\t\t<produto>\n\t\t\t\t\t<codigo>116600063</codigo>\n\t\t\t\t\t<tipo>0</tipo>\n\t\t\t\t\t<qtd>1</qtd>\n\t\t\t\t</produto>\n\t\t\t\t<obs></obs>\n\t\t\t\t<obj>DL619955496BR</obj>\n\t\t\t</coletas_solicitadas>\n\t\t</ns1:solicitarPostagemSimultanea>\n\t</soap:Body>\n</soap:Envelope>"
+						},
+						"url": {
+							"raw": "https://apphom.correios.com.br/logisticaReversaWS/logisticaReversaService/logisticaReversaWS?wsdl",
+							"protocol": "https",
+							"host": [
+								"apphom",
+								"correios",
+								"com",
+								"br"
+							],
+							"path": [
+								"logisticaReversaWS",
+								"logisticaReversaService",
+								"logisticaReversaWS"
+							],
+							"query": [
+								{
+									"key": "wsdl",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SRO",
+			"item": [
+				{
+					"name": "Buscar Eventos",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "text/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<soap:Envelope xmlns:soap='http://schemas.xmlsoap.org/soap/envelope/'>\n\t<soap:Body>\n    \t<ns1:buscaEventos xmlns:ns1='http://resource.webservice.correios.com.br/'>\n\t\t\t<usuario>ECT</usuario>\n\t\t\t<senha>SRO</senha>\n\t\t\t<tipo>L</tipo>\n\t\t\t<resultado>T</resultado>\n\t\t\t<lingua>101</lingua>\n\t\t\t<objetos>OF981229714BR</objetos>\n    \t</ns1:buscaEventos>\n\t</soap:Body>\n</soap:Envelope>"
+						},
+						"url": {
+							"raw": "http://webservice.correios.com.br/service/rastro",
+							"protocol": "http",
+							"host": [
+								"webservice",
+								"correios",
+								"com",
+								"br"
+							],
+							"path": [
+								"service",
+								"rastro"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Eventos de Lista",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<soap:Envelope xmlns:soap='http://schemas.xmlsoap.org/soap/envelope/'>\n\t<soap:Body>\n    \t<ns1:buscaEventosLista xmlns:ns1='http://resource.webservice.correios.com.br/'>\n\t\t\t<usuario>ECT</usuario>\n\t\t\t<senha>SRO</senha>\n\t\t\t<tipo>L</tipo>\n\t\t\t<resultado>T</resultado>\n\t\t\t<lingua>101</lingua>\n\t\t\t<objetos>OF981229714BR</objetos>\n\t\t\t<objetos>JF598971235BR</objetos>\n    \t</ns1:buscaEventosLista>\n\t</soap:Body>\n</soap:Envelope>"
+						},
+						"url": {
+							"raw": "http://webservice.correios.com.br/service/rastro",
+							"protocol": "http",
+							"host": [
+								"webservice",
+								"correios",
+								"com",
+								"br"
+							],
+							"path": [
+								"service",
+								"rastro"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
